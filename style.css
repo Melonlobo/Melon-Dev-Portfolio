@@ -273,6 +273,7 @@ header {
 .container3 {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .contact-me {
@@ -327,6 +328,24 @@ form textarea:focus {
 .form-group button:hover {
     cursor: pointer;
     outline: 2px solid aqua;
+}
+
+.success,
+.failure {
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.success {
+    color: rgb(0, 255, 0);
+}
+
+.failure {
+    color: red;
 }
 
 footer {
@@ -458,6 +477,10 @@ footer a {
     .resume-download-link {
         font-size: 1.2rem;
     }
+    .success,
+    .failure {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width:500px) {
@@ -556,6 +579,10 @@ footer a {
     }
     .contact-me {
         font-size: 2rem;
+    }
+    .success,
+    .failure {
+        font-size: 1.2rem;
     }
     form>input,
     form>textarea {

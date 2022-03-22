@@ -199,6 +199,32 @@ contactFormTL
 		},
 	});
 
+const successTL = gsap
+	.timeline({ defaults: { duration: 1, opacity: 0 } })
+	.pause();
+successTL.from('.success', { scale: 0, ease: 'power1' }).to('.success', {
+	opacity: 0,
+	delay: 1,
+	y: 50,
+	onComplete: () => {
+		successTL.pause();
+		successTL.progress(0);
+	},
+});
+
+const failureTL = gsap
+	.timeline({ defaults: { duration: 1, opacity: 0 } })
+	.pause();
+failureTL.from('.failure', { scale: 0, ease: 'power1' }).to('.failure', {
+	opacity: 0,
+	delay: 1,
+	y: 50,
+	onComplete: () => {
+		successTL.pause();
+		successTL.progress(0);
+	},
+});
+
 window.addEventListener('scroll', () => {
 	const projectPage = container2.getBoundingClientRect();
 	const contactPage = container3.getBoundingClientRect();
@@ -219,6 +245,13 @@ contactForm.addEventListener('submit', (e) => {
 		},
 		body: new URLSearchParams(contactFormData).toString(),
 	})
-		.then((res) => console.log('Form submitted'))
-		.catch((err) => console.error(err));
+		.then(() =>
+			successTL.play().then(() => {
+				contactForm.children[1].value = '';
+				contactForm.children[2].value = '';
+				contactForm.children[3].value = '';
+				contactForm.children[4].value = '';
+			})
+		)
+		.catch(() => failureTL.play());
 });
