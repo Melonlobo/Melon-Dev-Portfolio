@@ -7,13 +7,15 @@ const container2 = document.querySelector('.container2');
 const container3 = document.querySelector('.container3');
 const contactForm = document.querySelector('#contact-form');
 
-hamburger.addEventListener('click', () => {
+hamburger.addEventListener('click', openCloseNavbar);
+
+function openCloseNavbar() {
 	hamburger.firstChild.classList.toggle('bar1');
 	hamburger.children[1].classList.toggle('bar2');
 	hamburger.lastChild.classList.toggle('bar3');
 	hamburger.classList.add('jello');
 	navLinks.classList.toggle('active');
-});
+}
 
 title.addEventListener('click', (e) => {
 	container1.scrollIntoView();
