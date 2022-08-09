@@ -41,6 +41,44 @@ container1.addEventListener('click', (e) => {
 container2.addEventListener('mouseover', (e) => {
 	if (e.target.matches('.letter-2')) {
 		e.target.classList.add('jello');
+	} else if (e.target.matches('.card>img')) {
+		e.target.parentElement.children[0].style.zIndex = '2';
+		e.target.parentElement.children[1].style.zIndex = '2';
+		e.target.classList.add('img-blur');
+	} else if (e.target.matches('.project-title')) {
+		e.target.style.zIndex = '2';
+		e.target.parentElement.children[1].style.zIndex = '2';
+		e.target.parentElement.children[2].classList.add('img-blur');
+	} else if (e.target.matches('.link-group')) {
+		e.target.parentElement.children[0].style.zIndex = '2';
+		e.target.style.zIndex = '2';
+		e.target.parentElement.children[2].classList.add('img-blur');
+	} else if (e.target.matches('.link-group>a')) {
+		e.target.parentElement.parentElement.children[0].style.zIndex = '2';
+		e.target.parentElement.style.zIndex = '2';
+		e.target.parentElement.parentElement.children[2].classList.add('img-blur');
+	}
+});
+
+container2.addEventListener('mouseout', (e) => {
+	if (e.target.matches('.card>img')) {
+		e.target.parentElement.children[0].style.zIndex = '-2';
+		e.target.parentElement.children[1].style.zIndex = '-2';
+		e.target.classList.remove('img-blur');
+	} else if (e.target.matches('.project-title')) {
+		e.target.style.zIndex = '-2';
+		e.target.parentElement.children[1].style.zIndex = '-2';
+		e.target.parentElement.children[2].classList.remove('img-blur');
+	} else if (e.target.matches('.link-group')) {
+		e.target.parentElement.children[0].style.zIndex = '-2';
+		e.target.style.zIndex = '-2';
+		e.target.parentElement.children[2].classList.remove('img-blur');
+	} else if (e.target.matches('.link-group>a')) {
+		e.target.parentElement.parentElement.children[0].style.zIndex = '-2';
+		e.target.parentElement.style.zIndex = '-2';
+		e.target.parentElement.parentElement.children[2].classList.remove(
+			'img-blur'
+		);
 	}
 });
 
@@ -162,12 +200,12 @@ contactFormTL
 		y: 50,
 		ease: 'elastic',
 	})
-	.from('footer li', {
+	.from('footer>li', {
 		x: -100,
 		stagger: 0.1,
 		ease: 'power3',
 	})
-	.from('footer a', {
+	.from('footer>a', {
 		x: -100,
 		y: -50,
 		rotation: 180,
@@ -257,3 +295,25 @@ contactForm.addEventListener('submit', (e) => {
 		)
 		.catch(() => failureTL.play());
 });
+
+const sections = document.querySelectorAll('div[id]');
+
+window.addEventListener('scroll', navHighlighter);
+
+function navHighlighter() {
+	let scrollY = window.pageYOffset;
+	sections.forEach((current) => {
+		const sectionHeight = current.offsetHeight;
+		const sectionTop = current.offsetTop - 50;
+		const sectionId = current.getAttribute('id');
+		if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+			document
+				.querySelector('.nav-links>a[href*=' + sectionId + ']')
+				.classList.add('active');
+		} else {
+			document
+				.querySelector('.nav-links>a[href*=' + sectionId + ']')
+				.classList.remove('active');
+		}
+	});
+}

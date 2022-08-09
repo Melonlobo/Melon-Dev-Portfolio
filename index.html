@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MELON LOBO : PORTFOLIO</title>
     <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js" defer></script>
-    <script src="app.js" defer></script>
+    <script src="app.min.js" defer></script>
 </head>
 
 <body>
@@ -21,15 +24,16 @@
             <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
             <nav>
                 <ul class="nav-links">
-                    <a href="#" onclick="openCloseNavbar()">home</a>
+                    <a href="#home" onclick="openCloseNavbar()">home</a>
                     <a href="#projects" onclick="openCloseNavbar()">projects</a>
+                    <a href="https://melonlobo.hashnode.dev" target="_blank" onclick="openCloseNavbar()">Blogs</a>
                     <a href="MELON LOBO RESUME.pdf" download onclick="openCloseNavbar()">resume <i class="fas fa-file-download"></i></a>
                     <a href="#contact" onclick="openCloseNavbar()">contact</a>
                 </ul>
             </nav>
         </nav>
     </header>
-    <div class="container1">
+    <div id="home" class="container1">
         <div class="intro">
             <div class="first-line">
                 <p class="letter-1">H</p>
@@ -103,45 +107,173 @@
             <p class="letter-2">s</p>
         </h2>
         <div class="card">
+            <h2 class="project-title">CSS Challenges</h2>
+            <div class="link-group">
+                <a href="https://github.com/Melonlobo/CSS-Challenges" class="view-source-code" target="_blank">View source code</a>
+                <a href="https://css-challenges-melonlobo.vercel.app" class="view-site" target="_blank">View project site</a>
+            </div>
+            <img src="./assets/css-challenges.png" alt="">
+        </div>
+        <div class="card">
+            <h2 class="project-title">Street Style Landing Page</h2>
+            <div class="link-group">
+                <a href="https://github.com/Melonlobo/Street-Style-Landing-Page" class="view-source-code" target="_blank">View source code</a>
+                <a href="https://street-style-landing-page-melonlobo.vercel.app" class="view-site" target="_blank">View project site</a>
+            </div>
+            <img src="./assets/street-style.png" alt="">
+        </div>
+        <div class="card">
+            <h2 class="project-title">Restaurant Landing Page</h2>
+            <div class="link-group">
+                <a href="https://github.com/Melonlobo/Restaurant-Landing-Page" class="view-source-code" target="_blank">View source code</a>
+                <a href="https://restaurant-landing-page-melonlobo.vercel.app" class="view-site" target="_blank">View project site</a>
+            </div>
+            <img src="./assets/restaurant.png" alt="">
+        </div>
+        <div class="card">
+            <h2 class="project-title">Law Landing Page</h2>
+            <div class="link-group">
+                <a href="https://github.com/Melonlobo/Law-Landing-Page" class="view-source-code" target="_blank">View source code</a>
+                <a href="https://law-landing-page-melonlobo.vercel.app" class="view-site" target="_blank">View project site</a>
+            </div>
+            <img src="./assets/law.png" alt="">
+        </div>
+        <div class="card">
+            <h2 class="project-title">Digital Marketing Landing Page</h2>
+            <div class="link-group">
+                <a href="https://github.com/Melonlobo/Digital-Marketing-Landing-Page" class="view-source-code" target="_blank">View source code</a>
+                <a href="https://digital-marketing-landing-page-melonlobo.vercel.app" class="view-site" target="_blank">View project site</a>
+            </div>
+            <img src="./assets/digital-marketing.png" alt="">
+        </div>
+        <div class="card">
+            <h2 class="project-title">Crypto Landing Page</h2>
+            <div class="link-group">
+                <a href="https://github.com/Melonlobo/Crypto-Landing-Page" class="view-source-code" target="_blank">View source code</a>
+                <a href="https://crypto-landing-page-melonlobo.vercel.app" class="view-site" target="_blank">View project site</a>
+            </div>
+            <img src="./assets/crypto.png" alt="">
+        </div>
+        <div class="card">
+            <h2 class="project-title">Plant Care Landing Page</h2>
+            <div class="link-group">
+                <a href="https://github.com/Melonlobo/Plant-care-landing-page" class="view-source-code" target="_blank">View source code</a>
+                <a href="https://plant-care-landing-page-melonlobo.vercel.app" class="view-site" target="_blank">View project site</a>
+            </div>
+            <img src="./assets/plant-care.png" alt="">
+        </div>
+        <div class="card">
+            <h2 class="project-title">Product Landing Page</h2>
+            <div class="link-group">
+                <a href="https://github.com/Melonlobo/Product-Landing-Page" class="view-source-code" target="_blank">View source code</a>
+                <a href="https://product-landing-page-melonlobo.vercel.app" class="view-site" target="_blank">View project site</a>
+            </div>
+            <img src="./assets/product.png" alt="">
+        </div>
+        <div class="card">
+            <h2 class="project-title">Designer Landing Page</h2>
+            <div class="link-group">
+                <a href="https://github.com/Melonlobo/Web-Design-Landing-Page" class="view-source-code" target="_blank">View source code</a>
+                <a href="https://web-design-landing-page-melonlobo.vercel.app" class="view-site" target="_blank">View project site</a>
+            </div>
+            <img src="./assets/web-design.png" alt="">
+        </div>
+        <div class="card">
+            <h2 class="project-title">Web Developer Landing Page</h2>
+            <div class="link-group">
+                <a href="https://github.com/Melonlobo/Developer-landing-page" class="view-source-code" target="_blank">View source code</a>
+                <a href="https://web-developer-landing-page-melonlobo.vercel.app" class="view-site" target="_blank">View project site</a>
+            </div>
+            <img src="./assets/web-developer.png" alt="">
+        </div>
+        <div class="card">
+            <h2 class="project-title">Interior Design Landing Page</h2>
+            <div class="link-group">
+                <a href="https://github.com/Melonlobo/Interior-Design-Landing-Page" class="view-source-code" target="_blank">View source code</a>
+                <a href="https://interior-design-landing-page-melonlobo.vercel.app" class="view-site" target="_blank">View project site</a>
+            </div>
+            <img src="./assets/interior-design.png" alt="">
+        </div>
+        <div class="card">
+            <h2 class="project-title">Hosting Landing Page</h2>
+            <div class="link-group">
+                <a href="https://github.com/Melonlobo/Hosting-Landing-Page" class="view-source-code" target="_blank">View source code</a>
+                <a href="https://hosting-landing-page-melonlobo.vercel.app" class="view-site" target="_blank">View project site</a>
+            </div>
+            <img src="./assets/hosting.jpg" alt="">
+        </div>
+        <div class="card">
+            <h2 class="project-title">Business Landing Page</h2>
+            <div class="link-group">
+                <a href="https://github.com/Melonlobo/Business-Landing-Page" class="view-source-code" target="_blank">View source code</a>
+                <a href="https://business-landing-page-melonlobo.vercel.app" class="view-site" target="_blank">View project site</a>
+            </div>
+            <img src="./assets/business.jpg" alt="">
+        </div>
+        <div class="card">
+            <h2 class="project-title">SAAS Landing Page</h2>
+            <div class="link-group">
+                <a href="https://github.com/Melonlobo/SAAS-Landing-Page" class="view-source-code" target="_blank">View source code</a>
+                <a href="https://saas-landing-page-melonlobo.vercel.app" class="view-site" target="_blank">View project site</a>
+            </div>
+            <img src="./assets/saas.jpg" alt="">
+        </div>
+        <div class="card">
+            <h2 class="project-title">Dance Landing Page</h2>
+            <div class="link-group">
+                <a href="https://github.com/Melonlobo/Dance-Landing-Page" class="view-source-code" target="_blank">View source code</a>
+                <a href="https://dance-landing-page-melonlobo.vercel.app" class="view-site" target="_blank">View project site</a>
+            </div>
+            <img src="./assets/dance.png" alt="">
+        </div>
+        <div class="card">
+            <h2 class="project-title">Portfolio Landing Page</h2>
+            <div class="link-group">
+                <a href="https://github.com/Melonlobo/Portfolio-Landing-Page" class="view-source-code" target="_blank">View source code</a>
+                <a href="https://portfolio-landing-page-melonlobo.vercel.app" class="view-site" target="_blank">View project site</a>
+            </div>
+            <img src="./assets/portfolio.jpg" alt="">
+        </div>
+        <div class="card">
             <h2 class="project-title">Food Ordering App</h2>
             <div class="link-group">
                 <a href="https://github.com/Melonlobo/Food-Ordering-App" class="view-source-code" target="_blank">View source code</a>
-                <a href="https://food-ordering-app1.herokuapp.com/" class="view-site" target="_blank">View project site</a>
+                <a href="https://food-ordering-app1.herokuapp.com" class="view-site" target="_blank">View project site</a>
             </div>
         </div>
         <div class="card">
             <h2 class="project-title">Food List Dashboard</h2>
             <div class="link-group">
                 <a href="https://github.com/Melonlobo/Food-Details-CRUD-App" class="view-source-code" target="_blank">View source code</a>
-                <a href="https://food-details-crud-app.herokuapp.com/" class="view-site" target="_blank">View project site</a>
+                <a href="https://food-details-crud-app.herokuapp.com" class="view-site" target="_blank">View project site</a>
             </div>
         </div>
         <div class="card">
             <h2 class="project-title">Recipe App</h2>
             <div class="link-group">
                 <a href="https://github.com/Melonlobo/Recipe-app" class="view-source-code" target="_blank">View source code</a>
-                <a href="https://recipes-app-101.herokuapp.com//" class="view-site" target="_blank">View project site</a>
+                <a href="https://recipes-app-101.herokuapp.com" class="view-site" target="_blank">View project site</a>
             </div>
         </div>
         <div class="card">
             <h2 class="project-title">Currency Converter</h2>
             <div class="link-group">
                 <a href="https://github.com/Melonlobo/Currency-Converter" class="view-source-code" target="_blank">View source code</a>
-                <a href="https://currency-converter-app-101.herokuapp.com/" class="view-site" target="_blank">View project site</a>
+                <a href="https://currency-converter-app-101.herokuapp.com" class="view-site" target="_blank">View project site</a>
             </div>
         </div>
         <div class="card">
             <h2 class="project-title">Login Page Form Validation</h2>
             <div class="link-group">
                 <a href="https://github.com/Melonlobo/Login-page" class="view-source-code" target="_blank">View source code</a>
-                <a href="https://melonlobo.github.io/Login-page/" class="view-site" target="_blank">View project site</a>
+                <a href="https://melonlobo.github.io/Login-page" class="view-site" target="_blank">View project site</a>
             </div>
         </div>
         <div class="card">
             <h2 class="project-title">Todo App</h2>
             <div class="link-group">
                 <a href="https://github.com/Melonlobo/Todo_App---Clock" class="view-source-code" target="_blank">View source code</a>
-                <a href="https://melonlobo.github.io/Todo_App---Clock/" class="view-site" target="_blank">View project site</a>
+                <a href="https://melonlobo.github.io/Todo_App---Clock" class="view-site" target="_blank">View project site</a>
             </div>
         </div>
     </div>
@@ -173,7 +305,7 @@
         <footer>
             <li><i class="fas fa-phone-alt"></i> +91-8073472682</li>
             <li><i class="fab fa-whatsapp"></i> +91-8867658175</li>
-            <li><i class="fas fa-envelope"></i> melonlobo007@gmail.com</li>
+            <li><a href="mailto:melonlobo007@gmail.com"><i class="fas fa-envelope"></i>melonlobo007@gmail.com</a></li>
             <a href="https://github.com/Melonlobo?tab=repositories"><i class="fab fa-github"></i></a>
         </footer>
     </div>
