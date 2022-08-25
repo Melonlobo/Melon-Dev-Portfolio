@@ -1,645 +1,648 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    scroll-snap-type: y mandatory;
-    scrollbar-width: thin;
-    scrollbar-color: #000 #777;
-    scroll-behavior: smooth;
-    user-select: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	/* scroll-snap-type: y mandatory; */
+	scrollbar-width: thin;
+	scrollbar-color: #000 #777;
+	scroll-behavior: smooth;
+	user-select: none;
 }
 
 html::-webkit-scrollbar {
-    width: .8vw;
+	width: 10px;
 }
 
 html::-webkit-scrollbar-track {
-    background-color: #555;
+	background-color: #555;
 }
 
 html::-webkit-scrollbar-thumb {
-    background-color: #000;
-    border-radius: 500px;
+	background-color: #000;
+	border-radius: 500px;
 }
 
 header {
-    background-color: #222;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+	background-color: #222;
+	position: sticky;
+	top: 0;
+	z-index: 10;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin: auto;
 }
 
 .title {
-    font-size: 2rem;
-    letter-spacing: .6ch;
-    text-align: center;
-    margin-right: 1rem;
-    flex: 1;
-    color: aqua;
-    -webkit-text-stroke-width: .1rem;
-    -webkit-text-stroke-color: aqua;
-    transition: all ease-in-out .3s;
-    font-family: 'Tangerine', cursive;
+	font-size: 2rem;
+	letter-spacing: 0.6ch;
+	text-align: center;
+	margin-right: 1rem;
+	flex: 1;
+	color: aqua;
+	-webkit-text-stroke-width: 0.1rem;
+	-webkit-text-stroke-color: aqua;
+	transition: all ease-in-out 0.3s;
+	font-family: 'Tangerine', cursive;
 }
 
 .title:hover {
-    cursor: pointer;
-    color: aqua;
+	cursor: pointer;
+	color: aqua;
 }
 
 .title:active {
-    animation: jello 1.5s ease 0s 1 normal forwards;
+	animation: jello 1.5s ease 0s 1 normal forwards;
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
+	display: flex;
+	list-style: none;
 }
 
 .nav-links a {
-    padding: 1.5rem 1rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: aqua;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .5rem;
+	padding: 1.5rem 1rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: aqua;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
 }
 
 .nav-links a::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 0;
-    height: 1px;
-    background-color: aqua;
-    left: -.04rem;
-    bottom: 0;
-    transition: all ease-in-out 500ms;
+	content: '';
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 1px;
+	background-color: aqua;
+	left: -0.04rem;
+	bottom: 0;
+	transition: all ease-in-out 500ms;
 }
 
 .nav-links a:hover::after,
 a.active::after {
-    width: 100%;
+	width: 100%;
 }
 
 .nav-links a:hover,
 a.active {
-    background-color: #000;
-    cursor: pointer;
+	background-color: #000;
+	cursor: pointer;
 }
 
 .nav-links a:active {
-    color: #000;
-    background-color: aqua;
+	color: #000;
+	background-color: aqua;
 }
 
 .container1,
 .container2,
 .container3 {
-    background-color: #000;
-    min-height: 100vh;
-    width: 100%;
-    scroll-snap-align: start;
-    color: #fff;
+	background-color: #000;
+	min-height: 100vh;
+	width: 100%;
+	color: #fff;
+	/* scroll-snap-align: start; */
 }
 
 .container1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    font-size: 4rem;
-    font-weight: 700;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	font-size: 4rem;
+	font-weight: 700;
 }
 
 .intro {
-    margin-left: 5vw;
-    margin-top: 15vh;
-    color: aquamarine;
+	margin-left: 5vw;
+	margin-top: 10vh;
+	color: aquamarine;
 }
 
 .first-line,
 .second-line,
 .third-line {
-    display: flex;
+	display: flex;
 }
 
 .third-line {
-    font-size: 2rem;
-    color: aqua;
+	font-size: 2rem;
+	color: aqua;
 }
 
 .jello {
-    animation: jello 2s ease-in-out 0s 1 normal forwards;
+	animation: jello 2s ease-in-out 0s 1 normal forwards;
 }
 
 .space2 {
-    width: 2rem;
+	width: 2rem;
 }
 
 .space1 {
-    width: 1rem;
+	width: 1rem;
 }
 
 .welcome {
-    font-size: 3rem;
-    margin: auto;
-    color: red;
-    text-align: center;
-    text-shadow: 2px 2px 1px #fff;
+	font-size: 3rem;
+	margin: auto;
+	color: red;
+	text-align: center;
+	text-shadow: 2px 2px 1px #fff;
 }
 
 .more-intro {
-    display: flex;
-    margin: auto;
+	display: flex;
+	margin: 2rem auto;
 }
 
 .caption {
-    font-size: 1.2rem;
-    font-style: italic;
-    font-weight: 500;
-    animation: colorChanger 10s ease-in-out 0s infinite alternate forwards;
+	font-size: 1.2rem;
+	font-style: italic;
+	font-weight: 500;
+	animation: colorChanger 10s ease-in-out 0s infinite alternate forwards;
 }
 
 .phrases,
 .cursor {
-    text-align: center;
-    font-size: 2rem;
-    animation: colorChanger 1s ease-in-out 0s infinite alternate forwards;
+	text-align: center;
+	font-size: 2rem;
+	animation: colorChanger 1s ease-in-out 0s infinite alternate forwards;
 }
 
 .buttons {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    margin: auto;
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	margin: 1rem auto;
 }
 
 .projects-btn,
 .resume-download-link {
-    --glow-color: rgb(1, 245, 253);
-    --glow-spread-color: rgb(0, 0, 0);
-    --enhanced-glow-color: rgb(0, 0, 0);
-    --btn-color: rgb(0, 0, 0);
-    border: .2rem solid var(--glow-color);
-    padding: .6rem;
-    color: var(--glow-color);
-    font-size: 1.5rem;
-    font-weight: 500;
-    background-color: var(--btn-color);
-    outline: none;
-    text-decoration: none;
-    text-align: center;
-    margin: 1rem;
-    transition: all 0.3s;
+	--glow-color: rgb(1, 245, 253);
+	--glow-spread-color: rgb(0, 0, 0);
+	--enhanced-glow-color: rgb(0, 0, 0);
+	--btn-color: rgb(0, 0, 0);
+	border: 0.2rem solid var(--glow-color);
+	padding: 0.6rem;
+	color: var(--glow-color);
+	font-size: 1.5rem;
+	font-weight: 500;
+	background-color: var(--btn-color);
+	outline: none;
+	text-decoration: none;
+	text-align: center;
+	margin: 0 1rem 1rem;
+	transition: all 0.3s;
 }
 
 .projects-btn:hover,
 .resume-download-link:hover {
-    cursor: pointer;
-    color: var(--btn-color);
-    background-color: var(--glow-color);
-    box-shadow: 0 0 1rem .2rem var(--glow-color), 0 0 2rem 2rem var(--glow-spread-color), inset 0 0 .75rem .25rem var(--glow-color);
+	cursor: pointer;
+	color: var(--btn-color);
+	background-color: var(--glow-color);
+	box-shadow: 0 0 1rem 0.2rem var(--glow-color),
+		0 0 2rem 2rem var(--glow-spread-color),
+		inset 0 0 0.75rem 0.25rem var(--glow-color);
 }
 
 .projects-btn:active,
 .resume-download-link:active {
-    box-shadow: 0 0 0.5rem .2rem var(--glow-color), 0 0 2.5rem 2rem var(--glow-spread-color), inset 0 0 .5rem .2rem var(--glow-color);
+	box-shadow: 0 0 0.5rem 0.2rem var(--glow-color),
+		0 0 2.5rem 2rem var(--glow-spread-color),
+		inset 0 0 0.5rem 0.2rem var(--glow-color);
 }
 
 .container2 {
-    padding: 15vh 5vw 10vh 5vw;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    gap: 2rem;
+	padding: 15vh 5vw 10vh 5vw;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	gap: 2rem;
 }
 
 .my-projects {
-    margin-left: 2vw;
-    width: 100%;
-    display: flex;
-    color: aqua;
-    font-size: 2.5rem;
+	margin-left: 2vw;
+	width: 100%;
+	display: flex;
+	color: aqua;
+	font-size: 2.5rem;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 22rem;
-    background-color: #222;
-    color: rgb(255, 0, 221);
-    height: 30vh;
-    padding: 1rem;
-    border-top: 2px solid aqua;
-    border-bottom: 2px solid aqua;
-    transition: all .3s;
-    position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 22rem;
+	background-color: #222;
+	color: rgb(255, 0, 221);
+	height: 30vh;
+	padding: 1rem;
+	border-top: 2px solid aqua;
+	border-bottom: 2px solid aqua;
+	transition: all 0.3s;
+	position: relative;
 }
 
-.card>img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: all .3s ease-in-out;
+.card > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: all 0.3s ease-in-out;
 }
 
 .img-blur {
-    opacity: .2;
-    z-index: -2;
-    transition: all .3s ease-in-out;
+	opacity: 0.2;
+	z-index: -2;
+	transition: all 0.3s ease-in-out;
 }
 
 .project-title {
-    text-align: center;
-    font-size: 1.5rem;
+	text-align: center;
+	font-size: 1.5rem;
 }
 
 .link-group {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    list-style: none;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	list-style: none;
 }
 
 .view-source-code,
 .view-site {
-    font-size: 1.2rem;
-    padding: 0.3rem;
-    text-decoration: none;
-    color: aqua;
-    border: 1px solid aqua;
-    background-color: #000;
-    text-align: center;
-    transition: all .3s;
+	font-size: 1.2rem;
+	padding: 0.3rem;
+	text-decoration: none;
+	color: aqua;
+	border: 1px solid aqua;
+	background-color: #000;
+	text-align: center;
+	transition: all 0.3s;
 }
 
 .view-source-code:hover,
 .view-site:hover {
-    background-color: aqua;
-    color: #000;
+	background-color: aqua;
+	color: #000;
 }
 
 .container3 {
-    display: flex;
-    flex-direction: column;
-    position: relative;
+	display: flex;
+	flex-direction: column;
+	position: relative;
 }
 
 .contact-me {
-    margin: 15vh 0 5vh 10vw;
-    font-size: 3rem;
-    display: flex;
-    color: aqua;
+	margin: 15vh 0 5vh 10vw;
+	font-size: 3rem;
+	display: flex;
+	color: aqua;
 }
 
 .form-group {
-    flex: 1;
+	flex: 1;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    width: 80vw;
-    gap: 1rem;
-    margin-left: 10vw;
-    margin-bottom: 1rem;
+	display: flex;
+	flex-direction: column;
+	width: 80vw;
+	gap: 1rem;
+	margin-left: 10vw;
+	margin-bottom: 1rem;
 }
 
-form>input,
-form>textarea {
-    font-size: 1.5rem;
-    padding: 0.3rem;
-    background-color: #222;
-    border: none;
-    outline: none;
-    color: aqua;
+form > input,
+form > textarea {
+	font-size: 1.5rem;
+	padding: 0.3rem;
+	background-color: #222;
+	border: none;
+	outline: none;
+	color: aqua;
 }
 
 form input:focus,
 form textarea:focus {
-    border-bottom: 1px solid aqua;
-    color: aquamarine;
+	border-bottom: 1px solid aqua;
+	color: aquamarine;
 }
 
 .form-group button {
-    width: fit-content;
-    height: fit-content;
-    font-size: 1.5rem;
-    padding: .5rem 1rem;
-    color: aqua;
-    background-color: #222;
-    border: none;
-    outline: none;
-    margin-left: 10vw;
-    margin-bottom: 2rem;
+	width: fit-content;
+	height: fit-content;
+	font-size: 1.5rem;
+	padding: 0.5rem 1rem;
+	color: aqua;
+	background-color: #222;
+	border: none;
+	outline: none;
+	margin-left: 10vw;
+	margin-bottom: 2rem;
 }
 
 .form-group button:hover {
-    cursor: pointer;
-    outline: 2px solid aqua;
+	cursor: pointer;
+	outline: 2px solid aqua;
 }
 
 .success,
 .failure {
-    font-size: 2rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+	font-size: 2rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
 }
 
 .success {
-    color: rgb(0, 255, 0);
+	color: rgb(0, 255, 0);
 }
 
 .failure {
-    color: red;
+	color: red;
 }
 
 footer {
-    display: flex;
-    list-style: none;
-    font-size: 1.5rem;
-    padding: 1rem;
-    width: 100%;
-    height: fit-content;
-    background-color: #222;
-    justify-content: space-evenly;
-    gap: 1rem;
+	display: flex;
+	list-style: none;
+	font-size: 1.5rem;
+	padding: 1rem;
+	width: 100%;
+	height: fit-content;
+	background-color: #222;
+	justify-content: space-evenly;
+	gap: 1rem;
 }
 
 footer li {
-    margin-top: .75rem;
-    margin-right: 1rem;
+	margin-top: 0.75rem;
+	margin-right: 1rem;
 }
 
 footer li:hover,
 footer a:hover {
-    color: aqua;
+	color: aqua;
 }
 
-footer>li>a {
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: #fff;
+footer > li > a {
+	font-size: 1.5rem;
+	text-decoration: none;
+	color: #fff;
 }
 
 .fa-phone-alt {
-    color: blue;
+	color: blue;
 }
 
 .fa-whatsapp {
-    color: limegreen;
+	color: limegreen;
 }
 
 .fa-envelope {
-    color: red;
-    margin-right: .5rem;
+	color: red;
+	margin-right: 0.5rem;
 }
 
 footer a {
-    font-size: 3rem;
-    color: purple;
+	font-size: 3rem;
+	color: purple;
 }
 
 @keyframes jello {
-    0% {
-        transform: scale(1, 1);
-    }
-    30% {
-        transform: scale(1.25, 0.75);
-        color: springgreen;
-    }
-    40% {
-        transform: scale(0.75, 1.25);
-    }
-    50% {
-        transform: scale(1.15, 0.85);
-        color: aqua;
-    }
-    65% {
-        transform: scale(0.95, 1.05);
-    }
-    75% {
-        transform: scale(1.05, 0.95);
-        color: tomato;
-    }
-    100% {
-        transform: scale(1, 1);
-    }
+	0% {
+		transform: scale(1, 1);
+	}
+	30% {
+		transform: scale(1.25, 0.75);
+		color: springgreen;
+	}
+	40% {
+		transform: scale(0.75, 1.25);
+	}
+	50% {
+		transform: scale(1.15, 0.85);
+		color: aqua;
+	}
+	65% {
+		transform: scale(0.95, 1.05);
+	}
+	75% {
+		transform: scale(1.05, 0.95);
+		color: tomato;
+	}
+	100% {
+		transform: scale(1, 1);
+	}
 }
 
 @keyframes colorChanger {
-    0% {
-        color: aqua;
-    }
-    25% {
-        color: yellow;
-    }
-    50% {
-        color: red;
-    }
-    75% {
-        color: rgb(35, 255, 35);
-        ;
-    }
-    100% {
-        color: blue;
-    }
+	0% {
+		color: aqua;
+	}
+	25% {
+		color: yellow;
+	}
+	50% {
+		color: red;
+	}
+	75% {
+		color: rgb(35, 255, 35);
+	}
+	100% {
+		color: blue;
+	}
 }
 
-@media all and (max-width:1024px) {
-    .title {
-        font-size: 1.6rem;
-    }
-    footer {
-        flex-flow: row wrap;
-    }
+@media all and (max-width: 1024px) {
+	.title {
+		font-size: 1.6rem;
+	}
+	footer {
+		flex-flow: row wrap;
+	}
 }
 
 @media all and (max-width: 720px) {
-    .navbar {
-        display: flex;
-        flex-direction: column;
-    }
-    .title {
-        padding: .5rem;
-    }
-    .nav-links a {
-        padding: .5rem 1rem;
-    }
-    .first-line,
-    .second-line {
-        font-size: 2.5rem;
-    }
-    .third-line {
-        font-size: 1.5rem;
-    }
-    .space1 {
-        width: .75rem;
-    }
-    .space2 {
-        width: 1.5rem;
-    }
-    .caption {
-        font-size: 1.1rem;
-    }
-    .phrases,
-    .cursor {
-        font-size: 1.5rem;
-    }
-    .welcome {
-        font-size: 2rem;
-    }
-    .projects-btn,
-    .resume-download-link {
-        font-size: 1.2rem;
-    }
-    .success,
-    .failure {
-        font-size: 1.5rem;
-    }
+	.navbar {
+		display: flex;
+		flex-direction: column;
+	}
+	.title {
+		padding: 0.5rem;
+	}
+	.nav-links a {
+		padding: 0.5rem 1rem;
+	}
+	.first-line,
+	.second-line {
+		font-size: 2.5rem;
+	}
+	.third-line {
+		font-size: 1.5rem;
+	}
+	.space1 {
+		width: 0.75rem;
+	}
+	.space2 {
+		width: 1.5rem;
+	}
+	.caption {
+		font-size: 1.1rem;
+	}
+	.phrases,
+	.cursor {
+		font-size: 1.5rem;
+	}
+	.welcome {
+		font-size: 2rem;
+	}
+	.projects-btn,
+	.resume-download-link {
+		font-size: 1.2rem;
+	}
+	.success,
+	.failure {
+		font-size: 1.5rem;
+	}
 }
 
-@media (max-width:530px) {
-    .title {
-        font-size: 1.5rem;
-    }
-    .hamburger {
-        height: 1.5rem;
-        width: 2rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        position: absolute;
-        top: 1rem;
-        right: .5rem;
-    }
-    .hamburger:hover {
-        cursor: pointer;
-    }
-    .hamburger .bar {
-        height: .2rem;
-        width: 100%;
-        border-radius: 1rem;
-        background-color: aqua;
-        transition: all ease-in-out .3s;
-    }
-    .bar1 {
-        transform: translateY(.65rem) rotate(45deg);
-        transition: all ease-in-out 1s;
-    }
-    .bar2 {
-        display: none;
-        transition: all ease-in-out .3s;
-    }
-    .bar3 {
-        transform: translateY(-.65rem) rotate(-45deg);
-        transition: all ease-in-out .3s;
-    }
-    .navbar {
-        padding: 0.5rem;
-        width: 100%;
-        flex-direction: column;
-    }
-    .navbar nav {
-        width: 100%;
-    }
-    .nav-links {
-        width: 100%;
-        display: none;
-        flex-direction: column;
-    }
-    .nav-links a {
-        width: 100%;
-        padding: .5rem;
-        text-align: center;
-    }
-    .active {
-        display: flex;
-    }
-    .first-line,
-    .second-line {
-        font-size: 2rem;
-    }
-    .third-line {
-        font-size: 1.2rem;
-    }
-    .space1 {
-        width: 0.5rem;
-    }
-    .space2 {
-        width: 1rem;
-    }
-    .caption {
-        font-size: 1rem;
-    }
-    .welcome {
-        font-size: 1.5rem;
-    }
-    .phrases,
-    .cursor {
-        font-size: 1.2rem;
-    }
-    .projects-btn,
-    .resume-download-link {
-        font-size: 1rem;
-    }
-    .my-projects {
-        font-size: 2rem;
-    }
-    .card {
-        width: 20rem;
-    }
-    .project-title {
-        font-size: 1.2rem;
-    }
-    .view-source-code,
-    .view-site {
-        font-size: 1rem;
-    }
-    .contact-me {
-        font-size: 2rem;
-    }
-    .success,
-    .failure {
-        font-size: 1.2rem;
-    }
-    form>input,
-    form>textarea {
-        font-size: 1.2rem;
-    }
-    .form-group button {
-        font-size: 1.2rem;
-    }
-    footer {
-        flex-direction: column;
-    }
-    footer li,
-    footer a {
-        margin: auto;
-    }
-    footer {
-        font-size: 1.2rem;
-    }
-    footer>li>a {
-        font-size: 1.2rem;
-    }
+@media (max-width: 530px) {
+	.title {
+		font-size: 1.5rem;
+	}
+	.hamburger {
+		height: 1.5rem;
+		width: 2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		position: absolute;
+		top: 1rem;
+		right: 0.5rem;
+	}
+	.hamburger:hover {
+		cursor: pointer;
+	}
+	.hamburger .bar {
+		height: 0.2rem;
+		width: 100%;
+		border-radius: 1rem;
+		background-color: aqua;
+		transition: all ease-in-out 0.3s;
+	}
+	.bar1 {
+		transform: translateY(0.65rem) rotate(45deg);
+		transition: all ease-in-out 1s;
+	}
+	.bar2 {
+		display: none;
+		transition: all ease-in-out 0.3s;
+	}
+	.bar3 {
+		transform: translateY(-0.65rem) rotate(-45deg);
+		transition: all ease-in-out 0.3s;
+	}
+	.navbar {
+		padding: 0.5rem;
+		width: 100%;
+		flex-direction: column;
+	}
+	.navbar nav {
+		width: 100%;
+	}
+	.nav-links {
+		width: 100%;
+		display: none;
+		flex-direction: column;
+	}
+	.nav-links a {
+		width: 100%;
+		padding: 0.5rem;
+		text-align: center;
+	}
+	.active {
+		display: flex;
+	}
+	.first-line,
+	.second-line {
+		font-size: 2rem;
+	}
+	.third-line {
+		font-size: 1.2rem;
+	}
+	.space1 {
+		width: 0.5rem;
+	}
+	.space2 {
+		width: 1rem;
+	}
+	.caption {
+		font-size: 1rem;
+	}
+	.welcome {
+		font-size: 1.5rem;
+	}
+	.phrases,
+	.cursor {
+		font-size: 1.2rem;
+	}
+	.projects-btn,
+	.resume-download-link {
+		font-size: 1rem;
+	}
+	.my-projects {
+		font-size: 2rem;
+	}
+	.card {
+		width: 20rem;
+	}
+	.project-title {
+		font-size: 1.2rem;
+	}
+	.view-source-code,
+	.view-site {
+		font-size: 1rem;
+	}
+	.contact-me {
+		font-size: 2rem;
+	}
+	.success,
+	.failure {
+		font-size: 1.2rem;
+	}
+	form > input,
+	form > textarea {
+		font-size: 1.2rem;
+	}
+	.form-group button {
+		font-size: 1.2rem;
+	}
+	footer {
+		flex-direction: column;
+	}
+	footer li,
+	footer a {
+		margin: auto;
+	}
+	footer {
+		font-size: 1.2rem;
+	}
+	footer > li > a {
+		font-size: 1.2rem;
+	}
 }
