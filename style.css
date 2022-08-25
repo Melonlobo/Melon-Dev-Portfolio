@@ -601,10 +601,6 @@ footer a {
 	.cursor {
 		font-size: 1.2rem;
 	}
-	.more-intro,
-	.buttons {
-		margin: auto;
-	}
 	.projects-btn,
 	.resume-download-link {
 		font-size: 1rem;
